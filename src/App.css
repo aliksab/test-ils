@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+body,
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+.main {
+  display: flex;
+  background-color: #ffffff;
+  font-size: 14px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-app {
+  display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-map {
+  overflow: hidden;
+  height: 50%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sidebar {
+  position: relative;
+  background-color: #ffffff;
+}
+.sidebar-panel {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 360px;
+  padding: 10px; 
+}
+.menu {
+  text-align: center;
+}
+.item {
+  margin: 5px;
+  margin-bottom: 1rem;
+}
+.item span {
+  line-height: 1rem;
+}
+.leaflet-container {
+  height: 100vh;
+}
+.leaflet-routing-container {
+  display: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 1279px) {
+  .sidebar{
+    display: flex;
+    flex-direction: row;
   }
-  to {
-    transform: rotate(360deg);
+  .sidebar-panel {
+    flex: 0 0 100%;
+  }
+  .item {
+    display: flex;
+    flex-direction: column;
+  }
+  .item p {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .main-app {
+    flex-direction: row;
   }
 }
