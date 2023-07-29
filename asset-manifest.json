@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/test-ils/static/css/main.84af8c6c.css",
+    "main.js": "/test-ils/static/js/main.c7644169.js",
+    "index.html": "/test-ils/index.html",
+    "main.84af8c6c.css.map": "/test-ils/static/css/main.84af8c6c.css.map",
+    "main.c7644169.js.map": "/test-ils/static/js/main.c7644169.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.84af8c6c.css",
+    "static/js/main.c7644169.js"
+  ]
+}
