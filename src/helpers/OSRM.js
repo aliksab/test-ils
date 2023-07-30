@@ -3,10 +3,9 @@ export const getPolylinesFromRes = (res) => {
 };
 
 export const parsePoints = (points)=> {
-    console.log(points);
     let res = "";
     for (const point of points){
         res += point[0] + "," + point[1] + ";";
     }
-    console.log(res.slice(0, -1));
+    return res.slice(0, -1);
 };

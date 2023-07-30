@@ -7,8 +7,17 @@ const SiderPanel = () => {
   const dispatch = useDispatch()
   const getState = useSelector((state) => state.routers);
   const [value, setValue] = useState(1);
+  const getRoute = [];
+  let checkRoute = getState.findIndex(el => {
+    if (el.checked === true) {
+      return el
+    } 
+  });
+  getState[checkRoute].routes.map(el => {
+    return getRoute.push(el.geocode);
+  })
   const onChange = (e) => {
-    dispatch({type: "toggle/route", payload: {id: e.target.value} });
+    dispatch({type: "toggle/route", payload: {id: e.target.value, point: getRoute} });
     setValue(e.target.value);
   };
 
